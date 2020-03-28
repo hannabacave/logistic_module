@@ -1,1 +1,6 @@
-C:/Users/hbaca/.config/git/ignore
+__pycache__
+.vscode
+dist
+egg-info
+.ipynb_checkpoints
+logistic_module.egg-info
