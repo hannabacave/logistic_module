@@ -1,0 +1,10 @@
+setup.py
+logistic_module.egg-info/PKG-INFO
+logistic_module.egg-info/SOURCES.txt
+logistic_module.egg-info/dependency_links.txt
+logistic_module.egg-info/not-zip-safe
+logistic_module.egg-info/top_level.txt
+logistic_module/LogisticEquation/Logistic_and_vectorization.py
+logistic_module/LogisticEquation/__init__.py
+logistic_module/Mandelbrot2D/__init__.py
+logistic_module/Mandelbrot3D/__init__.py
