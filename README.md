@@ -1,3 +1,5 @@
+![Python package](https://github.com/hannabacave/logistic_module/workflows/Python%20package/badge.svg)
+
 # Logistic_module
 
 Logistic_module is a Python module that allows you to produce videos and widget representing some of the elements connected to the logistic map and the Mandelbroot set.
