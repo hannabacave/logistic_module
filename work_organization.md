@@ -16,7 +16,7 @@ Yassine Mimouni : yassine.mimouni@etu.umontpellier.fr
 The goal of this project is to be able to produce or reproduce videos and widget representing some of the elements connected to the logistic map and the Mandelbroot set which can be seen in this video:  
 https://www.youtube.com/watch?v=ovJcsL7vyrk&app=desktop 
 
-Those widgets ans videos were divide in three groups:
+Those widgets and videos were divide in three groups:
 1) Logistic map
 2) Mandelbrot 2D visualization and animation
 3) Mandelbrot 3D visualization and animation
