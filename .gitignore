@@ -6,4 +6,5 @@ egg-info
 logistic_module.egg-info
 .coverage
 .github/workflows
-build/lib/logistic_module
+build
+.gitkeep
