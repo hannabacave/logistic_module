@@ -5,6 +5,5 @@ egg-info
 .ipynb_checkpoints
 logistic_module.egg-info
 .coverage
-.github/workflows
 build
 .gitkeep
