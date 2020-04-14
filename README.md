@@ -1,4 +1,5 @@
 ![Python package](https://github.com/hannabacave/logistic_module/workflows/Python%20package/badge.svg)
+[![codecov](https://codecov.io/gh/hannabacave/logistic_module/branch/master/graph/badge.svg)](https://codecov.io/gh/hannabacave/logistic_module)
 
 # Logistic_module
 
