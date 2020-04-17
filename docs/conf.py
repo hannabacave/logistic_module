@@ -71,6 +71,7 @@ pygments_style = 'manni'
 # a list of builtin themes.
 #
 html_theme = 'sphinx_drove_theme'
+html_them_path = 'C:/Users/hbaca/Anaconda3/Lib/site-packages/sphinx_drove_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
