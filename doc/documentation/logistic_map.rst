@@ -1,20 +1,46 @@
-.. Logistic Module documentation master file, created by
-   sphinx-quickstart on Tue Apr 14 23:34:58 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+Logistic map
+===============
 
-Welcome to Logistic Module's documentation!
-===========================================
+What's a logistic map ?
+------------------------
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+The logistic map is a sequence defined by the following recurrence formula :
+
+.. math::
+
+   x_{n+1}=rx_n(1-x_n)
+
+where :
+
+- r is the growth ratio and is defined and r :math:`r \in [0, 4]`
+
+- :math:`x_0 \in [0, 1]`
+
+This sequence allows us to simulate the population growth. Indeed, r is the coefficient 
+by which the increasing of population : x  is multiplicated. But, just increasing poluation isn't 
+realistic, so we introduce the factor : 1 - x representing the decrease of it. So, with this equation we 
+can observe the evolution of some animal species like the rabbits. 
 
 
+But, what's the link between fractals and logistic map ? 
+When, we plotting the logistic map, when :math:`r > 3.45` we can note the logistic map split up in two same curves. 
+Besides, when :math:`r > 3.75` this is the chaos. The graph which permite to see this is called *Bifurcation diagram*.
 
-Indices and tables
-==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+In this part, you'll see how to calculate and represent the logistic map, and how to represent the bifurcation diagram. 
+
+The classes 
+-------------
+
+The class to calculate and vectorize logistic_map :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. autoclass:: logistic_module.LogisticEquation.Logistic_and_vectorization.Logistic_equation
+    :members:
+
+The class to create animation of logistic map and to plot bifurcation diagram :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. autoclass:: logistic_module.LogisticEquation.Visualization.Visualization
+    :members:
+

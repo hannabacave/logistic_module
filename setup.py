@@ -8,6 +8,6 @@ setup(
   url='https://github.com/hannabacave/Logistic_module',
   author='Cindy Delage, Hanna Bacave, Yassine Mimouni',
   license='MIT',
-  packages=['logistic_module.LogisticEquation','logistic_module.Mandelbrot2D','logistic_module.Mandelbrot3D'],
+  packages=['logistic_module'],
   zip_safe=False
 )
