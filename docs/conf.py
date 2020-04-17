@@ -10,7 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import sphinx_rtd_theme
+
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
@@ -33,7 +33,6 @@ release = '0.0.1'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
     'sphinx.ext.mathjax',
 ]
 
@@ -58,7 +57,7 @@ language = 'English'
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'manni'
@@ -72,7 +71,6 @@ pygments_style = 'manni'
 html_theme = 'sphinx_drove_theme'
 html_theme_path = ['_themes',]
 
-#html_theme_path = 'home/users/sphinx_drove_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
