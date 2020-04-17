@@ -3,3 +3,4 @@ numpy==1.18.1
 numba==0.45.1
 plotly==4.6.0
 pytest
+sphinx_drove_theme
