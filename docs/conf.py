@@ -11,7 +11,6 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 import sphinx_rtd_theme
-import sphinx_drove_theme
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
@@ -70,7 +69,7 @@ pygments_style = 'manni'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_drove_theme'
+html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 html_logo = '_static/favicon.png'
 #html_theme_path = 'home/users/sphinx_drove_theme'
