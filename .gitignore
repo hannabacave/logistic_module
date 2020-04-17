@@ -9,3 +9,5 @@ build
 _build
 .gitkeep
 .github/
+*.csv
+*.pyc
