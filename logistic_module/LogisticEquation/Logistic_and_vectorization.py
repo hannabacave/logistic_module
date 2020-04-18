@@ -43,7 +43,7 @@ class Logistic_equation:
         :return: Vector of size n composed by the couples of points (x, f(x)) where f(x) is an iteration of logistic map.
         :rtype: list"""
 
-        start = time.time
+        start = time.time()
         coord = [(x0,0)]
         i = 0
         start = time
@@ -53,6 +53,6 @@ class Logistic_equation:
             coord.append((y0,y0))
             x0 = y0
             i += 1
-        end = time.time
-        print("Temps passé pour exécuter la commande: {0:.5f} s.".format(end - start))
+        end = time.time()
+        print("Time ellapsed to excute function : {0:.5f} s.".format(end - start))
         return coord
