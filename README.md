@@ -14,9 +14,10 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install logisti
 pip install logistic_module
 ```
 
-## Dovumentation
+## Documentation
 
 The documentation of this package is available on this website : https://logistic-module.readthedocs.io/en/latest/index.html
+
 ## Contributers:
 
 ```
