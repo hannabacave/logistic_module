@@ -11,7 +11,7 @@ Logistic_module is a Python module that allows you to produce videos and widget 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install logistic_module.
 
 ```bash
-pip install logistic_module
+pip install logistic-module
 ```
 
 ## Documentation
