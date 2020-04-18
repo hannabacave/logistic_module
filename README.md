@@ -1,4 +1,6 @@
 ![Python package](https://github.com/hannabacave/logistic_module/workflows/Python%20package/badge.svg)
+[![Documentation Status](https://readthedocs.org/projects/logistic-module/badge/?version=latest&token=7d9ba9ec0c7b5a43e16f65d9ecf440dda61bacf75dbf16db1a936596ba77140f)](https://logistic-module.readthedocs.io/en/latest/?badge=latest)
+[![codecov](https://codecov.io/gh/hannabacave/logistic_module/branch/master/graph/badge.svg)](https://codecov.io/gh/hannabacave/logistic_module)
 
 # Logistic_module
 
@@ -11,6 +13,11 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install logisti
 ```bash
 pip install logistic_module
 ```
+
+## Documentation
+
+The documentation of this package is available on this website : https://logistic-module.readthedocs.io/en/latest/index.html
+
 ## Contributers:
 
 ```
