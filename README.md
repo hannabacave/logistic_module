@@ -16,7 +16,7 @@ pip install logistic_module
 
 ## Dovumentation
 
-The documentation of this package is available on this website : __https://logistic-module.readthedocs.io/en/latest/index.html
+The documentation of this package is available on this website : https://logistic-module.readthedocs.io/en/latest/index.html
 ## Contributers:
 
 ```
