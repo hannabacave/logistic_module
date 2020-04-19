@@ -2,17 +2,13 @@ from numba import jit
 import matplotlib.pyplot as plt
 from Mandelbrot2D import Mandelbrot_2D
 
-Z_2 = Mandelbrot_2D(500, 500, 50, -1.5, 0.2, -0.85, 0.85)
-Z_3 = Mandelbrot_2D(500, 500, 50, -1.4, 0, -0.9, 0.5)
-Z_4 = Mandelbrot_2D(500, 500, 50, -1.4, -0.2, -0.9, 0.3)
-Z_5 = Mandelbrot_2D(500, 500, 50, -1.4, -0.5, -0.7, 0.2)
-Z_6 = Mandelbrot_2D(500, 500, 50, -1.4, -0.9, -0.5, 0.1)
-Z_7 = Mandelbrot_2D(500, 500, 50, -1.4, -1.2, -0.13, 0.07)
-Z_8 = Mandelbrot_2D(500, 500, 50, -1.4, -1.23, -0.10, 0.07)
-Z_9 = Mandelbrot_2D(500, 500, 50, -1.4, -1.25, -0.08, 0.07)
-Z_10 = Mandelbrot_2D(500, 500, 50, -1.4, -1.3, -0.06, 0.04)
-Z_11 = Mandelbrot_2D(500, 500, 50, -1.4, -1.32, -0.04, 0.04)
-Z_12 = Mandelbrot_2D(500, 500, 50, -1.4, -1.36, -0.04, 0.04)
+Z_2 = Mandelbrot_2D(500, 500, 50, -1.7, 0.2, -0.95, 0.95)
+Z_3 = Mandelbrot_2D(500, 500, 50, -1.5, 0, -0.75, 0.75)
+Z_4 = Mandelbrot_2D(500, 500, 50, -1.5, -0.35, -0.57, 0.57)
+Z_5 = Mandelbrot_2D(500, 500, 50, -1.44,-0.72, -0.4,0.4)
+Z_6 = Mandelbrot_2D(500, 500, 50, -1.42, -0.98, -0.2, 0.2)
+Z_7 = Mandelbrot_2D(500, 500, 50, -1.42,-1.23,-0.1,0.09)
+Z_8 = Mandelbrot_2D(500, 500, 50, -1.41,-1.36,-0.02,0.03)
 
 @jit(nopython=False)
 def animate(i):
@@ -38,14 +34,6 @@ def animate(i):
         im = plt.imshow(Z_7.__Mandelbrotset__)
     if i == 6:
         im = plt.imshow(Z_8.__Mandelbrotset__)
-    if i == 7:
-        im = plt.imshow(Z_9.__Mandelbrotset__)
-    if i == 8:
-        im = plt.imshow(Z_10.__Mandelbrotset__)
-    if i == 9:
-        im = plt.imshow(Z_11.__Mandelbrotset__)
-    if i == 10:
-        im = plt.imshow(Z_12.__Mandelbrotset__)
     return im,
 
 
