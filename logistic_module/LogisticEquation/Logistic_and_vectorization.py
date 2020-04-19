@@ -5,15 +5,13 @@ class Logistic_equation:
         - One to calculate an iteration of logistic map 
 
         - One to vectorize the result of n iterations of logistic map in couples of (x, f (x))
-
-        Besides, in this class we define a parameter global in our class :
-
-        :param n: Number of iterations 
-        :type n: int
     """
 
     def __init__(self, n):
-        """Initialisation of class"""
+        """Initialisation of class
+
+        :param n: Number of iterations 
+        :type n: int"""
         self.n = n
 
     def logistic(self, r, x):
@@ -31,7 +29,7 @@ class Logistic_equation:
         return r * x * (1 - x)
 
     def vectorization(self, x0, r):
-        """Return a vector of size n, composed by couples of points. The couples of points maked by respectively 
+        """Returns a vector of size n, composed by couples of points. The couples of points maked by respectively 
         the valeur of x and the result of a logistic map iteration with this x.
 
         :param x0: Initial coordinate
@@ -43,7 +41,7 @@ class Logistic_equation:
         :return: Vector of size n composed by the couples of points (x, f(x)) where f(x) is an iteration of logistic map.
         :rtype: list"""
 
-        start = time.time
+        start = time.time()
         coord = [(x0,0)]
         i = 0
         start = time
@@ -53,6 +51,6 @@ class Logistic_equation:
             coord.append((y0,y0))
             x0 = y0
             i += 1
-        end = time.time
-        print("Temps passé pour exécuter la commande: {0:.5f} s.".format(end - start))
+        end = time.time()
         return coord
+        print("Time ellapsed to excute function : {0:.5f} s.".format(end - start))
