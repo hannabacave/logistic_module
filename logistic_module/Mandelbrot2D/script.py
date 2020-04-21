@@ -20,7 +20,7 @@ Z = Mandelbrot_2D(hauteur=500, largeur=500, max_iteration=100,
 
 fig = plt.figure()
 fig.suptitle("Mandelbrot set")
-im = plt.imshow(Z.__Mandelbrotset__)
+im = plt.imshow(Z.Mandelbrotset)
 plt.colorbar()
 plt.show()
 
@@ -34,7 +34,7 @@ fig, ax = plt.subplots(1, 1, figsize=(12, 6),
 fig.suptitle("Mandelbrot fractal")
 Z_1 = Mandelbrot_2D(500, 500, 50, -2, 0.5, -1.25, 1.25)
 #We print the original picture of the Mandelbrot set, without any zoom:
-im = plt.imshow(Z_1.__Mandelbrotset__)
+im = plt.imshow(Z_1.Mandelbrotset)
 #We use the function Animation from matplotlib so that every zoom is printed after the previous one. Tha values for i are the integers between 0 and 11, it corresponds to frames in the parameters:
 anim = animation.FuncAnimation(fig, animate, frames=np.arange(11), interval=400, blit=False)
 plt.show()

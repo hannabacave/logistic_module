@@ -19,7 +19,9 @@ class Mandelbrot_2D(object):
     """
 
     def __init__(self, largeur, hauteur, max_iteration, xmin, xmax, ymin, ymax):
-        """:param largeur: numbers of columns of the matrix
+        """Initialization of the parameters
+
+        :param largeur: numbers of columns of the matrix
         :type largeur: integer    
 
         :param hauteur: numbers of lines of the matrix
@@ -50,7 +52,12 @@ class Mandelbrot_2D(object):
     
     @property
 
-    def __Mandelbrotset__(self):
+    def Mandelbrotset(self):
+        """returns a matrix of the Mandelbrot set (with zeros and ones) that can be plotted
+        
+           :return: the state of the Mandelbrot set at the iteration max_iteration
+           :return type:array of integers 
+        """
         #We first create a matrix with dimensions chosen by the user with the parameters "largeur" and "hauteur". Shes only contains zeros, but some of the values of the matrix will be changed by the function
         self.array = np.zeros((self.hauteur, self.largeur), dtype=int64)
         for x in range(self.hauteur):
