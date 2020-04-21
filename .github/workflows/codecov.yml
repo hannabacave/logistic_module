@@ -16,6 +16,7 @@ jobs:
     strategy:
       matrix:
         python-version: [3.7]
+
     steps:
     - uses: actions/checkout@master
     - name: Setup Python  
@@ -30,5 +31,5 @@ jobs:
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v1
       with:
-        fail_ci_if_error: true
+        fail_ci_if_error: false
         file: ./coverage.xml
