@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
-import time
+
 from .Logistic_and_vectorization import Logistic_equation
 
 class Visualization:
@@ -93,7 +93,6 @@ class Visualization:
         :return: Plot showing bifurcation diagram
         :rtype: plot with matplotlib
         """
-        start = time.time
         fig, ax = plt.subplots()
 
         for i in range(self.p):
@@ -103,8 +102,5 @@ class Visualization:
         
         ax.set_xlim(2.5, 4)
         ax.set_title("Bifurcation diagram")
-
-        end = time.time
-        print("Temps passé pour exécuter la commande: {0:.5f} s.".format(end - start))
 
         plt.show()

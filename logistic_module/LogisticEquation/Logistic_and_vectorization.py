@@ -1,4 +1,3 @@
-import time
 class Logistic_equation:
     """This class contains two functions : 
 
@@ -41,16 +40,12 @@ class Logistic_equation:
         :return: Vector of size n composed by the couples of points (x, f(x)) where f(x) is an iteration of logistic map.
         :rtype: list"""
 
-        start = time.time()
         coord = [(x0,0)]
         i = 0
-        start = time
         while i < self.n:
             y0 = self.logistic(r, x0)
             coord.append((x0,y0))        
             coord.append((y0,y0))
             x0 = y0
             i += 1
-        end = time.time()
         return coord
-        print("Time ellapsed to excute function : {0:.5f} s.".format(end - start))
