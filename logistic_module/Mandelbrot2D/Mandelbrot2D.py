@@ -50,7 +50,6 @@ class Mandelbrot_2D(object):
         self.ymin = ymin
         self.ymax = ymax
     
-    @property
 
     def Mandelbrotset(self):
         """returns a matrix of the Mandelbrot set (with zeros and ones) that can be plotted
