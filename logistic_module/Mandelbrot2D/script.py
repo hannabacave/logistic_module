@@ -1,6 +1,7 @@
 #The functions used in this script are coming from other scripts, so we have to import them:
 from Mandelbrot2D import Mandelbrot_2D
 from Mandelbrot2DAnimation import animate
+from Inside_Mandelbrotset  import Inside_the_set
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -38,8 +39,12 @@ im = plt.imshow(Z_1.Mandelbrotset)
 #We use the function Animation from matplotlib so that every zoom is printed after the previous one. Tha values for i are the integers between 0 and 11, it corresponds to frames in the parameters:
 anim = animation.FuncAnimation(fig, animate, frames=np.arange(11), interval=400, blit=False)
 plt.show()
-plt.colorbar()
 #We save the animation:
 
 end_animation=time.time()
 print("Time spent to animate the zoom on the Mandelbrotset:  {0:.5f} s.".format(end_animation - start_animation))
+
+start_animation_2=time.time()
+Inside_the_set()
+end_animation_2=time.time()
+print("Time spent to animate the zoom inside the Mandelbrotset:  {0:.5f} s.".format(end_animation_2 - start_animation_2))
