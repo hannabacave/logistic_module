@@ -17,10 +17,10 @@ def Inside_the_set():
         if i<=50:
             Z=Mandelbrot_2D(500,500,50,-2+0.02*i,0.5-0.02*i, -1.25+0.02*i, 1.25-0.02*i)
             im.set_data(Z.Mandelbrotset)
-        if i>50 and i<=150:
+        if i>50 and i<=130:
             Z_1=Mandelbrot_2D(500,500,200,-1+0.0026*(i-50),-0.5-0.0021*(i-50), -0.25+0.0044*(i-50), 0.25-0.0003*(i-50))
             im.set_data(Z_1.Mandelbrotset)
-        if i>150:
+        if i>130:
             Z_2=Mandelbrot_2D(500,500,600,-0.74+0.00044*(i-150),-0.71-0.00008*(i-150), 0.19+0.00046*(i-150), 0.22-0.00006*(i-150))
             im.set_data(Z_2.Mandelbrotset)
         return im,

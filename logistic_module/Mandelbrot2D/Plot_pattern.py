@@ -2,9 +2,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
 from scipy.sparse import csr_matrix, isspmatrix
+from memory_profiler import profile
 
 from Mandelbrot2D import Mandelbrot_2D
 
+@profile
 def plot_patterns():
     """plot the pattern you have chosen from the list
 
@@ -30,8 +32,6 @@ def plot_patterns():
         fig = plt.figure()
         fig.suptitle("Minis mandelbrot set")
         im = plt.imshow(Z_2.Mandelbrotset)
-        plt.colorbar()
-        plt.show()
     if x=="Elephant valley":
         #Second plot of a characteristic pattern of the Mandelbrot set (elephant valley):
         Z_3=Mandelbrot_2D(500,500,600,0.25,0.30,-0.01,0.04) #An over sparse matrix
@@ -42,8 +42,6 @@ def plot_patterns():
         fig = plt.figure()
         fig.suptitle("Elephant valleys")
         im = plt.imshow(Z_5.Mandelbrotset)
-        plt.colorbar()
-        plt.show()
     if x=="Triple squared valley":
         Z=Mandelbrot_2D(500,500,600,-0.057,-0.075,0.6435,0.6544)
         isspmatrix(csr_matrix(Z.Mandelbrotset))
@@ -51,9 +49,7 @@ def plot_patterns():
         fig = plt.figure()
         fig.suptitle("Triple squared valley")
         im = plt.imshow(Z.Mandelbrotset)
-        plt.colorbar()
-        plt.show()
     if x!="mini mandelbrot" and x!="Elephant valley" and x!="Triple squared valley":
         print("It seems like you did not chose one of the patterns of the list...Restart the function if you want to plot a characteristic pattern")
-
-plot_patterns()
+    plt.colorbar()
+    plt.show()
