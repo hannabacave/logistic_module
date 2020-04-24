@@ -5,4 +5,3 @@ plotly==4.6.0
 pytest
 pytest-cov
 memory_profiler
-cProfile
