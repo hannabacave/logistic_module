@@ -27,6 +27,7 @@ jobs:
       run: |
         pip install pytest
         pip install pytest-cov
+        pip install memory_profiler
         pip install -r requirements.txt
         pytest --cov=./ --cov-report=xml
     - name: Upload coverage to Codecov  
