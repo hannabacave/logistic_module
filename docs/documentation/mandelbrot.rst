@@ -26,9 +26,9 @@ So, in this part the user will be able to see (and code) :
 
 - An animation zooming into the set ;
 
-- The Mandelbrot set in 3D ; 
+- An interactive vizualisation of the Mandelbrot set in 3D.
 
-- An animation rotating the fractal. 
+- An animation rotating the 3D fractal to show the link between the Mandelbrot set and the bofurcation diagram. 
 
 Mandelbrot in 2D 
 -------------------
@@ -48,5 +48,5 @@ Interactive vizualisation :
 .. autoclass:: logistic_module.Mandelbrot3D.Mandelbrot3D.Mand_3D
     :members:
 
-Rotation of the 3D Mandelbrot :
+Rotation of the 3D Mandelbrot set :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
