@@ -70,7 +70,7 @@ class Mandelbrot_2D(object):
         #When maxiteration is reached, we return the modifief matrix:
         return self.array
 
-cProfile.run("Mandelbrot_2D(500, 500, 50, -2, 0.5, -1.25, 1.25).Mandelbrotset")
+#cProfile.run("Mandelbrot_2D(500, 500, 50, -2, 0.5, -1.25, 1.25).Mandelbrotset")
 
 
 
