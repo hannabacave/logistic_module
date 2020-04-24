@@ -1,16 +1,18 @@
 from numba import jit 
 import matplotlib.pyplot as plt
 from Mandelbrot2D import Mandelbrot_2D
+from memory_profiler import profile
 
-Z_2 = Mandelbrot_2D(500, 500, 50, -1.7, 0.2, -0.95, 0.95)
-Z_3 = Mandelbrot_2D(500, 500, 50, -1.5, 0, -0.75, 0.75)
-Z_4 = Mandelbrot_2D(500, 500, 50, -1.5, -0.35, -0.57, 0.57)
-Z_5 = Mandelbrot_2D(500, 500, 50, -1.44,-0.72, -0.4,0.4)
-Z_6 = Mandelbrot_2D(500, 500, 50, -1.42, -0.98, -0.2, 0.2)
-Z_7 = Mandelbrot_2D(500, 500, 50, -1.42,-1.23,-0.1,0.09)
-Z_8 = Mandelbrot_2D(500, 500, 50, -1.41,-1.36,-0.02,0.03)
+Z_2 = Mandelbrot_2D(500, 500, 600, -1.7, 0.2, -0.95, 0.95)
+Z_3 = Mandelbrot_2D(500, 500, 600, -1.5, 0, -0.75, 0.75)
+Z_4 = Mandelbrot_2D(500, 500, 600, -1.5, -0.35, -0.57, 0.57)
+Z_5 = Mandelbrot_2D(500, 500, 600, -1.44,-0.72, -0.4,0.4)
+Z_6 = Mandelbrot_2D(500, 500, 600, -1.42, -0.98, -0.2, 0.2)
+Z_7 = Mandelbrot_2D(500, 500, 600,  -1.42,-1.23,-0.1,0.09)
+Z_8 = Mandelbrot_2D(500, 500, 600, -1.41886,-1.27142,-0.0961,0.08658)
+Z_9 = Mandelbrot_2D(500, 500, 600, -1.41,-1.3366,-0.05,0.05)
 
-@jit(nopython=False)
+@profile
 def animate(i):
     """Animated zoom on the mandelbrot set
     :param i: the number of time the functions is to be used
@@ -34,6 +36,10 @@ def animate(i):
         im = plt.imshow(Z_7.Mandelbrotset)
     if i == 6:
         im = plt.imshow(Z_8.Mandelbrotset)
+    if i>=7:
+        im=plt.imshow(Z_9.Mandelbrotset)
     return im,
+
+
 
 

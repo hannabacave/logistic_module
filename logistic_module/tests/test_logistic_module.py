@@ -1,5 +1,5 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
-from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
+from logistic_module.Mandelbrot2D.Mandelbrot2D_without_numba import Mandelbrot_2D
 import numpy as np
 
 le = Logistic_equation(n=1)
@@ -11,5 +11,6 @@ def test_logistic():
 def test_vectorization():
     assert le.vectorization(1,2) == [(1, 0), (1, 0), (0, 0)]
 
+
 def test_mandelbrotset():
-    assert np.any(m2.Mandelbrotset() == [[1, 1], [1, 1]])
+    assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
