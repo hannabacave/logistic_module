@@ -11,7 +11,6 @@ import time
 import plotly
 from Mandelbrot3D import Mand_3D
 
-
 warnings.filterwarnings("ignore")
 
 start = time.time()
@@ -23,9 +22,7 @@ dx = -0.6
 dy = 0    
     
 fig = Mand_3D(n,M,L,dx,dy)   
-    
 plotly.offline.plot(fig.interact(), filename='Mandelbrot3D_interactive.html')
 
 end = time.time()
-
 print("Time spent to modelize the Mandelbrot set in 3D:  {0:.5f} s.".format(end - start))
