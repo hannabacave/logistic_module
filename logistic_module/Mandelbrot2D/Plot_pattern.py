@@ -31,7 +31,7 @@ def plot_patterns():
         Z_2=Mandelbrot_2D(500,500,600,-0.718,-0.714,0.213,0.217)
         fig = plt.figure()
         fig.suptitle("Minis mandelbrot set")
-        im = plt.imshow(Z_2.Mandelbrotset)
+        im = plt.imshow(Z_2.Mandelbrotset, cmap='binary')
     if x=="Elephant valley":
         #Second plot of a characteristic pattern of the Mandelbrot set (elephant valley):
         Z_3=Mandelbrot_2D(500,500,600,0.25,0.30,-0.01,0.04) #An over sparse matrix
@@ -41,14 +41,14 @@ def plot_patterns():
         Z_5=Mandelbrot_2D(500,500,600,0.26185,0.26196,0.002515,0.002573)
         fig = plt.figure()
         fig.suptitle("Elephant valleys")
-        im = plt.imshow(Z_5.Mandelbrotset)
+        im = plt.imshow(Z_5.Mandelbrotset, cmap='binary')
     if x=="Triple squared valley":
         Z=Mandelbrot_2D(500,500,600,-0.057,-0.075,0.6435,0.6544)
         isspmatrix(csr_matrix(Z.Mandelbrotset))
         Z=Mandelbrot_2D(500,500,600,-0.069,-0.0669,0.6478,0.6490)
         fig = plt.figure()
         fig.suptitle("Triple squared valley")
-        im = plt.imshow(Z.Mandelbrotset)
+        im = plt.imshow(Z.Mandelbrotset, cmap='binary')
     if x!="mini mandelbrot" and x!="Elephant valley" and x!="Triple squared valley":
         print("It seems like you did not chose one of the patterns of the list...Restart the function if you want to plot a characteristic pattern")
     plt.colorbar()

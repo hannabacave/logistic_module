@@ -23,21 +23,21 @@ def animate(i):
     """
     #The programm passes this function multiples times: it goes from i=0 to a value of i that we are going to chose in the document script.py. For each value of i, we print a different matrice. As i increases, the interval for min values and max values (for x and y) becomes smaller, visuallly it is like if we were zooming on the first picture (obtained by printing Z)
     if i == 0:
-        im = plt.imshow(Z_2.Mandelbrotset)
+        im = plt.imshow(Z_2.Mandelbrotset, cmap='binary')
     if i == 1:
-        im = plt.imshow(Z_3.Mandelbrotset)
+        im = plt.imshow(Z_3.Mandelbrotset, cmap='binary')
     if i == 2:
-        im = plt.imshow(Z_4.Mandelbrotset)
+        im = plt.imshow(Z_4.Mandelbrotset, cmap='binary')
     if i == 3:
-        im = plt.imshow(Z_5.Mandelbrotset)
+        im = plt.imshow(Z_5.Mandelbrotset, cmap='binary')
     if i == 4:
-        im = plt.imshow(Z_6.Mandelbrotset)
+        im = plt.imshow(Z_6.Mandelbrotset, cmap='binary')
     if i == 5:
-        im = plt.imshow(Z_7.Mandelbrotset)
+        im = plt.imshow(Z_7.Mandelbrotset, cmap='binary')
     if i == 6:
-        im = plt.imshow(Z_8.Mandelbrotset)
+        im = plt.imshow(Z_8.Mandelbrotset, cmap='binary')
     if i>=7:
-        im=plt.imshow(Z_9.Mandelbrotset)
+        im=plt.imshow(Z_9.Mandelbrotset, cmap='binary')
     return im,
 
 

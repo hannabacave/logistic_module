@@ -1,4 +1,4 @@
-import os
+import os 
 import matplotlib.pyplot as plt
 import numpy as np
 from matplotlib import animation
@@ -16,12 +16,12 @@ def Inside_the_set():
     fig = plt.figure()
     fig.suptitle("Inside the Mandelbrot fractal")
     Z=Mandelbrot_2D(500, 500, 50, -2, 0.5, -1.25, 1.25)
-    im = plt.imshow(Z.Mandelbrotset)
+    im = plt.imshow(Z.Mandelbrotset, cmap='magma')
     #Possibility to save each frames in a temp directory, created on the fly
     x=input("Do you want to save each frame of the animation in a folder ? This will slow the animation. Answer 'yes' or 'no' without quotes :")
     if x=='yes':
         os.mkdir('temp')
-    def animate_200(i):
+    def animate_200(i, x):
         if i<=50:
             Z=Mandelbrot_2D(500,500,50,-2+0.02*i,0.5-0.02*i, -1.25+0.02*i, 1.25-0.02*i)
             im.set_data(Z.Mandelbrotset)
@@ -34,5 +34,7 @@ def Inside_the_set():
         if x=='yes':
             plt.savefig('temp/frame_{}.png'.format(i))
         return im,
-    anim = animation.FuncAnimation(fig, animate_200, frames=np.arange(0,210,1),fargs=(x,), interval=1, blit=False)
+    anim = animation.FuncAnimation(fig, animate_200, frames=np.arange(0,210,1), fargs=(x,), interval=1, blit=False)
     plt.show()
+
+
