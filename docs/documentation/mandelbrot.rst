@@ -42,8 +42,11 @@ The animation :
 Mandelbrot in 3D 
 ---------------------
 
-The plot   
-^^^^^^^^^^
+Interactive vizualisation :  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The animation
-^^^^^^^^^^^^^^
+.. autoclass:: logistic_module.Mandelbrot3D.Mandelbrot3D.Mand_3D
+    :members:
+
+Rotation of the 3D Mandelbrot :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
