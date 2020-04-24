@@ -8,7 +8,7 @@ spec = [('largeur', int64),
         ('hauteur', int64),
         ('max_iteration', int64),
         ('xmin', float64), ('xmax', float64), ('ymin', float64), ('ymax', float64),
-        ('array', int64[:, :]), ]
+        ('array', int64[:,:]), ]
 
 @jitclass(spec)
 class Mandelbrot_2D(object):
@@ -17,7 +17,6 @@ class Mandelbrot_2D(object):
     :return: A matrix with values 1 (if the point is not in the mandelbrot set) and 0 (if the point is in the Mandlebrot set)
     :rtype: array of integers
     """
-
     def __init__(self, largeur, hauteur, max_iteration, xmin, xmax, ymin, ymax):
         """Initialization of the parameters
 
@@ -50,7 +49,7 @@ class Mandelbrot_2D(object):
         self.ymin = ymin
         self.ymax = ymax
     
-
+    @property
     def Mandelbrotset(self):
         """returns a matrix of the Mandelbrot set (with zeros and ones) that can be plotted
         
@@ -78,5 +77,10 @@ class Mandelbrot_2D(object):
                     self.array[y, x] = 1
         #When maxiteration is reached, we return the modifief matrix:
         return self.array
+
+
+
+
+
 
 
