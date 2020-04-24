@@ -3,6 +3,7 @@ from logistic_module.Mandelbrot2D.Mandelbrot2D_without_numba import Mandelbrot_2
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 import numpy as np
 
+
 le = Logistic_equation(n=1)
 m2 = Mandelbrot_2D(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
 m3 = Mand_3D(n=200, M=200, L=1.4, dx=-0.6, dy=0.0)
@@ -42,13 +43,16 @@ def test_m3D_Yaxis():
 def test_m3D_mand():
 
     """Test if the elevated Mandelbrot set is right-shaped. """
-
+    import warnings
+    warnings.filterwarnings("ignore")
     assert np.shape(m3.mand()) == (m3.M, m3.M)  
+
 
 def test_m3D_interact():
 
     """Test if the 3D modelization of the Mandelbrot set isn't too long."""
-    
+
+    import time
     start = time.time()
     m3.interact()
     end = time.time() 

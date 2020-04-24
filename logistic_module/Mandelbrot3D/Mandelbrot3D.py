@@ -87,7 +87,7 @@ class Mand_3D():
     
     def interact(self):
     
-        """Return an interactive representation of the Mandelbrot set in 3D using plotly."""
+        """Return an interactive vizualisation of the Mandelbrot set in 3D using plotly."""
 
         fig = go.Figure(data = [go.Surface(z=self.mand(), x=self.grid()[0], y=self.grid()[1],                                   
                                            colorscale = 'Reds', 
