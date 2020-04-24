@@ -47,7 +47,7 @@ class Mandelbrot_2D(object):
             :return: a matrix with zeros
             :return type: array of integers
         """
-        self.array = np.zeros((self.hauteur, self.largeur), dtype=int64)
+        self.array = np.zeros((self.hauteur, self.largeur))
         return self.array
     
     def Mandelbrotset(self):
