@@ -4,7 +4,7 @@ from matplotlib import animation
 from scipy.sparse import csr_matrix, isspmatrix
 from memory_profiler import profile
 
-from logistic_module.Mandelbrot2D.Mandelbrot_without_numba import Mandelbrot2D_without_numba
+from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_numba import Mandelbrot_2D
 
 @profile
 def plot_patterns():
