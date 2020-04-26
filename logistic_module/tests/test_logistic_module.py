@@ -20,16 +20,6 @@ def test_vectorization():
 def test_mandelbrotset():
     assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
 
-def test_animation_2D():
-    for i in range(15):
-        im=animate(i)
-        assert type(im)==matplotlib.image.AxesImage
-
-def test_animation_200():
-    for i in range(210):
-        im=animate_200(i, "no")
-        assert type(im)==matplotlib.image.AxesImage
-
 def Mandelbrot_2D_fig():
     Z=Mandelbrot_2D(500,500,5,-1,1,-1,1)
     assert Z.fig.shape==(500,500)
