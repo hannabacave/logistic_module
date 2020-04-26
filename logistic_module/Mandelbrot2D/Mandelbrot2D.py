@@ -55,7 +55,7 @@ class Mandelbrot_2D(object):
             :return: a matrix with zeros
             :return type: array of integers
         """
-        self.array = np.zeros((self.hauteur, self.largeur), dtype=int64)
+        self.array = np.zeros((self.hauteur, self.largeur))
         return self.array
     
     @property
@@ -66,7 +66,7 @@ class Mandelbrot_2D(object):
            :return type:array of integers 
         """
         #We first create a matrix with dimensions chosen by the user with the parameters "largeur" and "hauteur". Shes only contains zeros, but some of the values of the matrix will be changed by the function
-        self.array=self.fig
+        self.array=self.fig()
         for x in range(self.hauteur):
             #for each line of the matrix, we define the value cx, that will be used later to change the values of (xn)
             cx = (x * (self.xmax - self.xmin) / self.hauteur + self.xmin)
