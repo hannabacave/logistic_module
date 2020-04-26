@@ -5,7 +5,7 @@ from matplotlib import animation
 from numba import jit 
 from memory_profiler import profile
 
-from logistic_module.Mandelbrot2D.Mandelbrot_without_numba import Mandelbrot2D_without_numba
+from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_numba import Mandelbrot_2D
 
 @profile
 def Inside_the_set():
