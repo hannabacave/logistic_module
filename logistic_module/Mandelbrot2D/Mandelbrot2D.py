@@ -8,7 +8,7 @@ spec = [('largeur', int64),
         ('hauteur', int64),
         ('max_iteration', int64),
         ('xmin', float64), ('xmax', float64), ('ymin', float64), ('ymax', float64),
-        ('array', int64[:,:]), ]
+        ('array', nb.types.List(nb.types.Array(nb.types.float32, 2, 'C'))), ]
 
 @jitclass(spec)
 class Mandelbrot_2D(object):
@@ -55,7 +55,7 @@ class Mandelbrot_2D(object):
             :return: a matrix with zeros
             :return type: array of integers
         """
-        self.array = np.zeros((self.hauteur, self.largeur))
+        self.array = np.zeros((self.hauteur, self.largeur), dtype=np.int64)
         return self.array
     
     @property
@@ -66,7 +66,7 @@ class Mandelbrot_2D(object):
            :return type:array of integers 
         """
         #We first create a matrix with dimensions chosen by the user with the parameters "largeur" and "hauteur". Shes only contains zeros, but some of the values of the matrix will be changed by the function
-        self.array=self.fig()
+        self.array=self.fig
         for x in range(self.hauteur):
             #for each line of the matrix, we define the value cx, that will be used later to change the values of (xn)
             cx = (x * (self.xmax - self.xmin) / self.hauteur + self.xmin)
