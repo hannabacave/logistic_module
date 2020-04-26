@@ -1,7 +1,7 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
-from logistic_module.Mandelbrot2D.Mandelbrot2D_without_numba import Mandelbrot_2D
-from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
-from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
+from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_numba import Mandelbrot_2D
+from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2DAnimation_without_numba import animate
+from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import Inside_the_set
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 import numpy as np
 
