@@ -1,5 +1,7 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
 from logistic_module.Mandelbrot2D.Mandelbrot2D_without_numba import Mandelbrot_2D
+from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
+from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 import numpy as np
 
@@ -18,7 +20,20 @@ def test_vectorization():
 def test_mandelbrotset():
     assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
 
+def test_animation_2D():
+    for i in range(15):
+        im=animate(i)
+        assert type(im)==matplotlib.image.AxesImage
 
+def test_animation_200():
+    for i in range(210):
+        im=animate_200(i, "no")
+        assert type(im)==matplotlib.image.AxesImage
+
+def Mandelbrot_2D_fig():
+    Z=Mandelbrot_2D(500,500,5,-1,1,-1,1)
+    assert Z.fig.shape==(500,500)
+    
 
 def test_m3D_grid():
 
