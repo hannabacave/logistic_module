@@ -1,8 +1,8 @@
 #The functions used in this script are coming from other scripts, so we have to import them:
-from Mandelbrot2D import Mandelbrot_2D
-from Mandelbrot2DAnimation import animate
-from Inside_Mandelbrotset  import Inside_the_set
-from Plot_pattern import plot_patterns
+from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
+from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
+from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
+from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
 
 import numpy as np
 import matplotlib.pyplot as plt

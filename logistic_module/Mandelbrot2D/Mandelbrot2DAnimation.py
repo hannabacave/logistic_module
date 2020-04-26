@@ -1,7 +1,8 @@
 from numba import jit 
 import matplotlib.pyplot as plt
-from Mandelbrot2D import Mandelbrot_2D
 from memory_profiler import profile
+
+from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 
 Z_2 = Mandelbrot_2D(500, 500, 600, -1.7, 0.2, -0.95, 0.95)
 Z_3 = Mandelbrot_2D(500, 500, 600, -1.5, 0, -0.75, 0.75)
