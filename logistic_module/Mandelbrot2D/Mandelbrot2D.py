@@ -2,6 +2,7 @@ from numba import int64
 from numba import float64
 from numba import jitclass
 import numpy as np
+import numba as nb
 import matplotlib.pyplot as plt
 
 spec = [('largeur', int64),
