@@ -17,9 +17,9 @@ start = time.time()
 
 n = int(input("Enter a value for n :"))
 M = int(input("Enter a value for M :"))
-L = float(input("Enter a value for L :"))
-dx = float(input("Enter a value for dx :"))
-dy = float(input("Enter a value for dy :")) 
+L = 1.4
+dx = -0.6
+dy = 0.0 
     
 fig = Mand_3D(n,M,L,dx,dy)   
 plotly.offline.plot(fig.interact(), filename='Mandelbrot3D_interactive.html')
