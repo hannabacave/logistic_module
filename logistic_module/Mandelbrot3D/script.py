@@ -15,11 +15,11 @@ warnings.filterwarnings("ignore")
 
 start = time.time()
 
-n = 200
-M = 200
-L = 1.4
-dx = -0.6
-dy = 0    
+n = int(input("Enter a value for n :"))
+M = int(input("Enter a value for M :"))
+L = float(input("Enter a value for L :"))
+dx = float(input("Enter a value for dx :"))
+dy = float(input("Enter a value for dy :")) 
     
 fig = Mand_3D(n,M,L,dx,dy)   
 plotly.offline.plot(fig.interact(), filename='Mandelbrot3D_interactive.html')
