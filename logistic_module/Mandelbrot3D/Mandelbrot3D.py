@@ -44,12 +44,13 @@ class Mand_3D():
 
         """ Initialize the parameters for the modelization with asked input for :
          - n : number of iteration of the Mandelbrot equation
-         - M : numer of pixels   """
+         - M : number of pixels   """
 
         n = int(input("Enter a value for n :"))
         M = int(input("Enter a value for M :"))
-  
+
         return n,M
+    
     
     def grid(self):
         
