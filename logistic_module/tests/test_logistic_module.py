@@ -3,12 +3,15 @@ from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2DAnimation_without_numba import animate
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import Inside_the_set
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
+from logistic_module.Mandelbrot3D.script import init_param
+
 import numpy as np
 
 
 le = Logistic_equation(n=1)
 m2 = Mandelbrot_2D(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
 m3 = Mand_3D(n=200, M=200, L=1.4, dx=-0.6, dy=0.0)
+fig_3D = init_param()
 
 def test_logistic():
     assert le.logistic(2, 1) == 0
@@ -27,7 +30,7 @@ def Mandelbrot_2D_fig():
 
 def test_m3D_grid():
 
-    """Test if the grid is right-shaped."""
+    """Test if the shape of the grid is right."""
 
     assert np.shape(m3.grid()) == (2, m3.M, m3.M)
 
@@ -47,7 +50,7 @@ def test_m3D_Yaxis():
      
 def test_m3D_mand():
 
-    """Test if the elevated Mandelbrot set is right-shaped. """
+    """Test if the shape of the elevated Mandelbrot set is right."""
     import warnings
     warnings.filterwarnings("ignore")
     assert np.shape(m3.mand()) == (m3.M, m3.M)  
@@ -62,5 +65,11 @@ def test_m3D_interact():
     m3.interact()
     end = time.time() 
 
-    assert (end - start) < 2.0     
+    assert (end - start) < 2.0
+
+def test_init_param():
+
+    """ Test if the types of the inputs are right."""
+
+    assert (isinstance(fig_3D.n , int) and isinstance(fig_3D.M , int ))
 
