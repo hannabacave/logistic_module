@@ -64,10 +64,3 @@ def test_m3D_interact():
     end = time.time() 
 
     assert (end - start) < 2.0
-
-def test_init_param():
-
-    """ Test if the types of the inputs are right."""
-
-    assert (isinstance(m3.init_param()[0] , int) and isinstance(m3.init_param()[1] , int ))
-
