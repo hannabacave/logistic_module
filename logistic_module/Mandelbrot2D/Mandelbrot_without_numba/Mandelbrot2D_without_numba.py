@@ -1,7 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from memory_profiler import profile
-import cProfile
 
 class Mandelbrot_2D(object):
     """Returns a matrix with values 0 if the point is in the Mandelbrot set, 1 if it is not. The number of iterations can be chosen with maxiteration, so that the function return the state of the Mandelbrit set after this number of iterations
@@ -9,7 +7,6 @@ class Mandelbrot_2D(object):
     :return: A matrix with values 1 (if the point is not in the mandelbrot set) and 0 (if the point is in the Mandlebrot set)
     :rtype: array of integers
     """
-    @profile
     def __init__(self, largeur, hauteur, max_iteration, xmin, xmax, ymin, ymax):
         """Initialization of the parameters
 
