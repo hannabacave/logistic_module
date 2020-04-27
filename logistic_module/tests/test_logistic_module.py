@@ -3,15 +3,13 @@ from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2DAnimation_without_numba import animate
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import Inside_the_set
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
-from logistic_module.Mandelbrot3D.script import init_param
-
 import numpy as np
 
 
 le = Logistic_equation(n=1)
 m2 = Mandelbrot_2D(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
 m3 = Mand_3D(n=200, M=200, L=1.4, dx=-0.6, dy=0.0)
-fig_3D = init_param()
+
 
 def test_logistic():
     assert le.logistic(2, 1) == 0
@@ -71,5 +69,5 @@ def test_init_param():
 
     """ Test if the types of the inputs are right."""
 
-    assert (isinstance(fig_3D.n , int) and isinstance(fig_3D.M , int ))
+    assert (isinstance(m3.init_param()[0] , int) and isinstance(m3.init_param()[1] , int ))
 
