@@ -2,7 +2,7 @@
    Use the Mand_3D class from Mandelbrot3D
    
    ..seealso:: plotly.graph_projects for figure reference and Mand_3D documentation
-   ..warning:: The modelization may take a bit of time depending of each computer (approximately 15s observed).
+   ..warning:: The modelization may take some time depending of each computer.
    ..note:: The decrease of the n and/or M parameters can speed up the processus.
    """
 
@@ -15,13 +15,13 @@ warnings.filterwarnings("ignore")
 
 start = time.time()
 
-n = 200
-M = 200
+n,M = Mand_3D.init_param()
 L = 1.4
 dx = -0.6
-dy = 0    
-    
-fig = Mand_3D(n,M,L,dx,dy)   
+dy = 0.0
+
+fig = Mand_3D(n,M,L,dx,dy)
+
 plotly.offline.plot(fig.interact(), filename='Mandelbrot3D_interactive.html')
 
 end = time.time()
