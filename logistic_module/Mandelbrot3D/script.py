@@ -15,23 +15,13 @@ warnings.filterwarnings("ignore")
 
 start = time.time()
 
-def init_param():
-   
-   """ Initialize the parameters for the modelization with asked input for :
-         - n : number of iteration of the Mandelbrot equation
-         - M : numer of pixels   """
+n,M = Mand_3D.init_param()
+L = 1.4
+dx = -0.6
+dy = 0.0
 
-   n = int(input("Enter a value for n :"))
-   M = int(input("Enter a value for M :"))
-   L = 1.4
-   dx = -0.6
-   dy = 0.0
+fig = Mand_3D(n,M,L,dx,dy)
 
-   fig = Mand_3D(n,M,L,dx,dy)
-
-   return fig 
-
-fig = init_param()
 plotly.offline.plot(fig.interact(), filename='Mandelbrot3D_interactive.html')
 
 end = time.time()
