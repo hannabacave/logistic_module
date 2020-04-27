@@ -24,6 +24,10 @@ def test_mandelbrotset():
 def Mandelbrot_2D_fig():
     Z=Mandelbrot_2D(500,500,5,-1,1,-1,1)
     assert Z.fig.shape==(500,500)
+
+def test_animation_2D():
+    im=animate(0)
+    assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
     
 
 def test_m3D_grid():
