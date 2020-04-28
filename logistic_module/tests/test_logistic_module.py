@@ -28,7 +28,7 @@ def test_vectorization():
 
 def test_jit():
     Z_jit=Mandelbrot_2D(500,500,5,-1,1,-1,1)
-    assert str(type(Z_jit.Mandelbrotset))=="<class 'numpy.ndarray'>"
+    assert str(type(Z_jit.Mandelbrotset))=="<class 'method'>"
     
 def test_mandelbrotset():
     assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
