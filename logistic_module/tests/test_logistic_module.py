@@ -34,6 +34,18 @@ def Mandelbrot_2D_fig():
 def test_plot_patterns():
     assert plot_patterns(x="test")=='It seems like you did not chose one of the patterns of the list...Restart the function if you want to plot a characteristic pattern'
 
+def test_pattern_1():
+    im=plot_patterns(x="mini mandelbrot")
+    assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
+
+def test_pattern_2():
+    im=plot_patterns(x="Elephant valley")
+    assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
+
+def test_pattern_3():
+    im=plot_patterns(x="Triple squared valley")
+    assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"    
+    
 def test_animation_2D():
     for i in range(8):
         im=animate(i)
