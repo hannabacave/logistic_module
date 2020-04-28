@@ -9,7 +9,7 @@ spec = [('largeur', int64),
         ('hauteur', int64),
         ('max_iteration', int64),
         ('xmin', float64), ('xmax', float64), ('ymin', float64), ('ymax', float64),
-        ('array', nb.types.List(nb.types.Array(nb.types.int64, 2, 'C'))), ]
+        ('array', int64[:,:]), ]
 
 @jitclass(spec)
 class Mandelbrot_2D:
