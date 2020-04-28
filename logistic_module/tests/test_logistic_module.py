@@ -3,6 +3,7 @@ from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2DAnimation_without_numba import animate
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import animate_200
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Plot_pattern_without_numba import plot_patterns
+from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
@@ -25,6 +26,10 @@ def test_vectorization():
     assert le.vectorization(1,2) == [(1, 0), (1, 0), (0, 0)]
 
 
+def test_jit():
+    Z_jit=Mandelbrot_2D(500,500,5,-1,1,-1,1)
+    assert str(type(Z_jit.Mandelbrotset))=="<class 'numpy.ndarray'>"
+    
 def test_mandelbrotset():
     assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
 
