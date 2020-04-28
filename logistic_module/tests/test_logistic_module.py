@@ -3,6 +3,7 @@ from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2DAnimation_without_numba import animate
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import Inside_the_set
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
+from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
 
 
@@ -28,6 +29,22 @@ def Mandelbrot_2D_fig():
 def test_animation_2D():
     im=animate(0)
     assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
+
+def test_sparse_matrix_1():
+    Z=Mandelbrot_2D(500,500,50,-1, -0.5, -0.25, 0.25)
+    assert isspmatrix(csr_matrix(Z.Mandelbrotset()))==True
+
+def test_sparse_matrix_2():
+    Z_1=Mandelbrot_2D(500,500,50,-0.74,-0.71,0.19,0.22)
+    assert isspmatrix(csr_matrix(Z_1.Mandelbrotset()))==True
+
+def test_sparse_matrix_3():
+    Z_2=Mandelbrot_2D(500,500,50,0.25,0.30,-0.01,0.04)
+    assert isspmatrix(csr_matrix(Z_2.Mandelbrotset()))==True
+
+def test_sparse_matrix_4():
+    Z=Mandelbrot_2D(500,500,50,-0.057,-0.075,0.6435,0.6544)
+    assert isspmatrix(csr_matrix(Z.Mandelbrotset()))==True
     
 
 def test_m3D_grid():
