@@ -36,22 +36,22 @@ Mandelbrot in 2D
 The class to plot :   
 ^^^^^^^^^^^^^^^^^^^^
 
-.. autoclass:: logistic_module.Mandelbrot2D.Mandelbrot2D.Mandelbrot_2D
+.. autoclass:: logistic_module.Mandelbrot2D.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot_2D
     :members:
 
 A zoom into the Mandelbrot set in two ways :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. autofunction:: logistic_module.Mandelbrot2D.Mandelbrot2DAnimation.animate()
+.. autofunction:: logistic_module.Mandelbrot2D.Mandelbrot2DAnimation.animate
     :members:
 
-.. autofunction:: logistic_module.Mandelbrot2D.Inside_Mandelbrot.Inside_the_set()
+.. autofunction:: logistic_module.Mandelbrot2D.Inside_Mandelbrot.Inside_the_set
     :members:
  
 A method to recognize some patterns into the Mandelbrot set
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. autofunction:: logistic_module.Mandelbrot2D.Plot_pattern.plot_patterns()
+.. autofunction:: logistic_module.Mandelbrot2D.Plot_pattern.plot_patterns
     :members:
 
 
