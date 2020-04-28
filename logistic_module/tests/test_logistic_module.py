@@ -33,7 +33,7 @@ def test_jit():
 
 def test_jit_2():
     start = time.time()
-    print(Z_jit=Mandelbrot_2D(500,500,5,-1,1,-1,1))
+    print(Mandelbrot_2D(500,500,5,-1,1,-1,1))
     end = time.time()
     assert (end - start) < 120.0
     
