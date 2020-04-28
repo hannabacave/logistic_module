@@ -33,11 +33,27 @@ So, in this part the user will be able to see (and code) :
 Mandelbrot in 2D 
 -------------------
 
-The plot : 
-^^^^^^^^^^^^
+The class to plot :   
+^^^^^^^^^^^^^^^^^^^^
 
-The animation :
-^^^^^^^^^^^^^^^^
+.. autoclass:: logistic_module.Mandelbrot2D.Mandelbrot2D.Mandelbrot_2D
+    :members:
+
+A zoom into the Mandelbrot set in two ways :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. autofunction:: logistic_module.Mandelbrot2D.Mandelbrot2DAnimation.animate
+    :members:
+
+.. autofunction:: logistic_module.Mandelbrot2D.Inside_Mandelbrot.Inside_the_set
+    :members:
+ 
+A method to recognize some patterns into the Mandelbrot set
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. autofunction:: logistic_module.Mandelbrot2D.Plot_pattern.plot_patterns
+    :members:
+
 
 Mandelbrot in 3D 
 ---------------------
@@ -47,6 +63,7 @@ Interactive vizualisation :
 
 .. autoclass:: logistic_module.Mandelbrot3D.Mandelbrot3D.Mand_3D
     :members:
+
 
 Rotation of the 3D Mandelbrot set :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
