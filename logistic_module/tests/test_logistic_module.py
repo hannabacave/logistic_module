@@ -2,6 +2,7 @@ from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_numba import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2DAnimation_without_numba import animate
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import Inside_the_set
+from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Plot_pattern_without_numba import plot_patterns
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
@@ -25,6 +26,9 @@ def test_mandelbrotset():
 def Mandelbrot_2D_fig():
     Z=Mandelbrot_2D(500,500,5,-1,1,-1,1)
     assert Z.fig.shape==(500,500)
+    
+def test_plot_patterns():
+    assert plot_patterns(x="test")=='It seems like you did not chose one of the patterns of the list...Restart the function if you want to plot a characteristic pattern'
 
 def test_animation_2D():
     im=animate(0)
