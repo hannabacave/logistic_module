@@ -7,6 +7,7 @@ from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
+import time
 
 
 le = Logistic_equation(n=1)
@@ -29,6 +30,12 @@ def test_vectorization():
 def test_jit():
     Z_jit=Mandelbrot_2D(500,500,5,-1,1,-1,1)
     assert str(type(Z_jit.Mandelbrotset))=="<class 'method'>"
+
+def test_jit_2():
+    start = time.time()
+    print(Z_jit=Mandelbrot_2D(500,500,5,-1,1,-1,1))
+    end = time.time()
+    assert (end - start) < 120.0
     
 def test_mandelbrotset():
     assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
