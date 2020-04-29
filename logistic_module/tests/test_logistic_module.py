@@ -68,7 +68,7 @@ def test_pattern_3():
 
 def test_Inside_the_set_jit():
     start=time.time()
-    Z=Inside_the_set()
+    Z=Inside_the_set(x="no")
     Z
     end=time.time()
     assert (end -start)<60
