@@ -1,6 +1,7 @@
 import os 
 import matplotlib.pyplot as plt
 import numpy as np
+import pytest
 from matplotlib import animation
 from numba import jit 
 from memory_profiler import profile
