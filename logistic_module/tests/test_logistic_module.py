@@ -70,16 +70,13 @@ def test_animation_200():
         assert str(type(im))=="<class 'tuple'>"
 
 def test_sparse_matrix_1():
-    assert isspmatrix(csr_matrix(Z.Mandelbrotset()))==True
+    assert isspmatrix(csr_matrix(Z.Mandelbrotset))==True
 
 def test_sparse_matrix_2():
     assert isspmatrix(csr_matrix(Z_1.Mandelbrotset()))==True
 
 def test_sparse_matrix_3():
     assert isspmatrix(csr_matrix(Z_2.Mandelbrotset()))==True
-
-def test_sparse_matrix_4():
-    assert isspmatrix(csr_matrix(Z.Mandelbrotset()))==True
     
 
 def test_m3D_grid():
