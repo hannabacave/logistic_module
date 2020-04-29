@@ -1,7 +1,6 @@
 #The functions used in this script are coming from other scripts, so we have to import them:
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
-from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
 
 import numpy as np
@@ -38,6 +37,7 @@ plt.show()
 end_1=time.time()
 print("Time spent to animate the zoom on the Mandelbrotset:  {0:.5f} s.".format(end_1 - start_1))
 
+from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 start_2=time.time()
 Inside_the_set()
 end_2=time.time()
