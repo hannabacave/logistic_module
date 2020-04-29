@@ -26,14 +26,10 @@ def test_logistic():
 def test_vectorization():
     assert le.vectorization(1,2) == [(1, 0), (1, 0), (0, 0)]
 
-
-def test_jit():
-    Z_jit=Mandelbrot_2D(500,500,5,-1,1,-1,1)
-    assert str(type(Z_jit.Mandelbrotset))=="<class 'method'>"
-
-def test_jit_2():
+    
+def test_Mandelbrot_jit():
     start = time.time()
-    print(Mandelbrot_2D(500,500,5,-1,1,-1,1))
+    print(Mandelbrot_2D_jit(500,500,5,-1,1,-1,1))
     end = time.time()
     assert (end - start) < 120.0
    
