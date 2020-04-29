@@ -4,7 +4,7 @@ from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Plot_pattern_without_numba import plot_patterns
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
-#from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
+from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
@@ -66,12 +66,12 @@ def test_pattern_3():
     im=plot_patterns(x="Triple squared valley")
     assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"    
 
-#def test_Inside_the_set_jit():
-    #start=time.time()
-    #Z=Inside_the_set(x="no")
-    #Z
-    #end=time.time()
-    #assert (end -start)<60
+def test_Inside_the_set_jit():
+    start=time.time()
+    Z=Inside_the_set(x="no")
+    Z
+    end=time.time()
+    assert (end -start)<60
 
 def test_sparse_matrix_1():
     assert isspmatrix(csr_matrix(Z.Mandelbrotset))==True
