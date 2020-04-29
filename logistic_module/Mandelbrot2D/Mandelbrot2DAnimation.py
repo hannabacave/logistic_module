@@ -22,7 +22,6 @@ def animate(i):
     :return: An image with a zoom on the Mandelbrot set
     :rtype: object 
     """
-    #The programm passes this function multiples times: it goes from i=0 to a value of i that we are going to chose in the document script.py. For each value of i, we print a different matrice. As i increases, the interval for min values and max values (for x and y) becomes smaller, visuallly it is like if we were zooming on the first picture (obtained by printing Z)
     if i == 0:
         im = plt.imshow(Z_2.Mandelbrotset, cmap='binary')
     if i == 1:
