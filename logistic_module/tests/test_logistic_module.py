@@ -13,8 +13,8 @@ import time
 le = Logistic_equation(n=1)
 m2 = Mandelbrot_2D_jit(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
 Z=Mandelbrot_2D_jit(500,500,5,-1,1,-1,1)
-Z_1=Mandelbrot_2D(500,500,50,-1, -0.5, -0.25, 0.25)
-Z_2=Mandelbrot_2D(500,500,50,-0.74,-0.71,0.19,0.22)
+Z_1=Mandelbrot_2D_jit(500,500,50,-1, -0.5, -0.25, 0.25)
+Z_2=Mandelbrot_2D_jit(500,500,50,-0.74,-0.71,0.19,0.22)
 Z_3=Mandelbrot_2D(500,500,50,0.25,0.30,-0.01,0.04)
 Z_4=Mandelbrot_2D(500,500,50,-0.057,-0.075,0.6435,0.6544)
 m3 = Mand_3D(n=200, M=200, L=1.4, dx=-0.6, dy=0.0)
@@ -37,6 +37,12 @@ def test_Mandelbrot_Animation_jit():
     for i in range(8):
         im=animate(i)
         assert str(type(im))=="<class 'tuple'>"
+
+def test_Mandelbrot_Animation_time():
+    start = time.time()
+    im=animate(0)
+    end = time.time()
+    assert (end - start) < 30
     
 def test_mandelbrotset_jit():
     assert np.any(m2.Mandelbrotset) == 1
@@ -58,11 +64,6 @@ def test_pattern_2():
 def test_pattern_3():
     im=plot_patterns(x="Triple squared valley")
     assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"    
-    
-#def test_animation_2D():
-    #for i in range(8):
-        #im=animate(i)
-        #assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
 
 def test_animation_200():
     for i in range(1,201,100):
@@ -73,10 +74,10 @@ def test_sparse_matrix_1():
     assert isspmatrix(csr_matrix(Z.Mandelbrotset))==True
 
 def test_sparse_matrix_2():
-    assert isspmatrix(csr_matrix(Z_1.Mandelbrotset()))==True
+    assert isspmatrix(csr_matrix(Z_1.Mandelbrotset))==True
 
 def test_sparse_matrix_3():
-    assert isspmatrix(csr_matrix(Z_2.Mandelbrotset()))==True
+    assert isspmatrix(csr_matrix(Z_2.Mandelbrotset))==True
     
 
 def test_m3D_grid():
