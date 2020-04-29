@@ -11,8 +11,8 @@ import time
 
 
 le = Logistic_equation(n=1)
-m2 = Mandelbrot_2D(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
-Z=Mandelbrot_2D(500,500,5,-1,1,-1,1)
+m2 = Mandelbrot_2D_jit(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
+Z=Mandelbrot_2D_jit(500,500,5,-1,1,-1,1)
 Z_1=Mandelbrot_2D(500,500,50,-1, -0.5, -0.25, 0.25)
 Z_2=Mandelbrot_2D(500,500,50,-0.74,-0.71,0.19,0.22)
 Z_3=Mandelbrot_2D(500,500,50,0.25,0.30,-0.01,0.04)
@@ -38,10 +38,10 @@ def test_Mandelbrot_Animation_jit():
         im=animate(i)
         assert str(type(im))=="<class 'tuple'>"
     
-def test_mandelbrotset():
-    assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
+def test_mandelbrotset_jit():
+    assert np.any(m2.Mandelbrotset) == 1
 
-def Mandelbrot_2D_fig():
+def Mandelbrot_2D_fig_jit():
     assert Z.fig.shape==(500,500)
     
 def test_plot_patterns():
