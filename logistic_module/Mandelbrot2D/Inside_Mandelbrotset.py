@@ -9,7 +9,8 @@ from memory_profiler import profile
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
 
 @profile
-def Inside_the_set(x="no"):
+def Inside_the_set(x=input("Do you want to save each frame of the animation in a folder ? This will slow the animation. Answer 'yes' or 'no' without quotes :")
+):
     """Animate a zoom inside the Mandelbrot set
     :return: video of more than 200 frames
     :rtype: video
