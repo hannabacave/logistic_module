@@ -36,5 +36,6 @@ def Inside_the_set():
         return im,
     anim = animation.FuncAnimation(fig, animate_200, frames=np.arange(0,210,1), fargs=(x,), interval=1, blit=False)
     plt.show()
+    return im
 
 
