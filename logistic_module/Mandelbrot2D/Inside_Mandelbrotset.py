@@ -8,7 +8,8 @@ from memory_profiler import profile
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
 
 @profile
-def Inside_the_set():
+def Inside_the_set(x=input("Do you want to save each frame of the animation in a folder ? This will slow the animation. Answer 'yes' or 'no' without quotes :")
+    ):
     """Animate a zoom inside the Mandelbrot set
     :return: video of more than 200 frames
     :rtype: video
@@ -18,7 +19,6 @@ def Inside_the_set():
     Z=Mandelbrot_2D_jit(500, 500, 50, -2, 0.5, -1.25, 1.25)
     im = plt.imshow(Z.Mandelbrotset, cmap='magma')
     #Possibility to save each frames in a temp directory, created on the fly
-    x=input("Do you want to save each frame of the animation in a folder ? This will slow the animation. Answer 'yes' or 'no' without quotes :")
     if x=='yes':
         os.mkdir('temp')
     def animate_200(i, x):
