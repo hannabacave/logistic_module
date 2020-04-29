@@ -1,9 +1,9 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_numba import Mandelbrot_2D
-from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2DAnimation_without_numba import animate
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import animate_200
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Plot_pattern_without_numba import plot_patterns
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
+from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
@@ -36,6 +36,11 @@ def test_jit_2():
     print(Mandelbrot_2D(500,500,5,-1,1,-1,1))
     end = time.time()
     assert (end - start) < 120.0
+   
+def test_Mandelbrot_Animation_jit():
+    for i in range(8):
+        im=animate(i)
+        assert str(type(im))=="<class 'tuple'>"
     
 def test_mandelbrotset():
     assert np.any(m2.Mandelbrotset() == np.array([[1., 1.], [1., 1.]]))
@@ -58,10 +63,10 @@ def test_pattern_3():
     im=plot_patterns(x="Triple squared valley")
     assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"    
     
-def test_animation_2D():
-    for i in range(8):
-        im=animate(i)
-        assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
+#def test_animation_2D():
+    #for i in range(8):
+        #im=animate(i)
+        #assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
 
 def test_animation_200():
     for i in range(1,201,100):
