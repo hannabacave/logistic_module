@@ -1,5 +1,5 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
-from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
+from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
@@ -10,10 +10,10 @@ import time
 
 
 le = Logistic_equation(n=1)
-m2 = Mandelbrot_2D_jit(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
-M=Mandelbrot_2D_jit(500,500,5,-1,1,-1,1)
-M_1=Mandelbrot_2D_jit(500,500,50,-1, -0.5, -0.25, 0.25)
-M_2=Mandelbrot_2D_jit(500,500,50,-0.74,-0.71,0.19,0.22)
+m2 = Mandelbrot_2D(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
+M=Mandelbrot_2D(500,500,5,-1,1,-1,1)
+M_1=Mandelbrot_2D(500,500,50,-1, -0.5, -0.25, 0.25)
+M_2=Mandelbrot_2D(500,500,50,-0.74,-0.71,0.19,0.22)
 m3 = Mand_3D(n=200, M=200, L=1.4, dx=-0.6, dy=0.0)
 
 
@@ -23,14 +23,20 @@ def test_logistic():
 def test_vectorization():
     assert le.vectorization(1,2) == [(1, 0), (1, 0), (0, 0)]
 
-    
-def test_Mandelbrot_jit():
+
+def test_Mandelbrot():
+    assert np.any(m2.Mandelbrotset) == 1
+
+def Mandelbrot_2D_fig():
+    assert m2.fig.shape==(2,2)
+
+def test_Mandelbrot_time():
     start = time.time()
-    print(Mandelbrot_2D_jit(500,500,5,-1,1,-1,1))
+    print(Mandelbrot_2D(500,500,5,-1,1,-1,1))
     end = time.time()
     assert (end - start) < 120.0
    
-def test_Mandelbrot_Animation_jit():
+def test_Mandelbrot_Animation():
     for i in range(8):
         im=animate(i)
         assert str(type(im))=="<class 'tuple'>"
@@ -40,12 +46,6 @@ def test_Mandelbrot_Animation_time():
     im=animate(0)
     end = time.time()
     assert (end - start) < 30
-    
-def test_mandelbrotset_jit():
-    assert np.any(m2.Mandelbrotset) == 1
-
-def Mandelbrot_2D_fig_jit():
-    assert m2.fig.shape==(2,2)
     
 def test_plot_patterns():
     assert plot_patterns(x="test")=='It seems like you did not chose one of the patterns of the list...Restart the function if you want to plot a characteristic pattern'
@@ -70,6 +70,11 @@ def test_pattern_time():
     assert (end-start) < 15
 
 def test_Inside_the_set_1():
+    x="no"
+    im=Inside_the_set(x)
+    assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
+
+def test_Inside_the_set_time_1():
     start=time.time()
     x="no"
     m=Inside_the_set(x)
@@ -77,18 +82,13 @@ def test_Inside_the_set_1():
     end=time.time()
     assert (end -start)<60
     
-def test_Inside_the_set_1():
+def test_Inside_the_set_time_2():
     start=time.time()
     x="yes"
     m=Inside_the_set(x)
     m
     end=time.time()
     assert (end -start)<120
-    
-def test_Inside_the_set_1():
-    x="no"
-    im=Inside_the_set(x)
-    assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
 
 def test_sparse_matrix_1():
     assert isspmatrix(csr_matrix(M.Mandelbrotset))==True
