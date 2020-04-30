@@ -1,10 +1,10 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_numba import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import animate_200
-from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Plot_pattern_without_numba import plot_patterns
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
+from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
 from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
