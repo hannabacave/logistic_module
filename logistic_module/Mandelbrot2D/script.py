@@ -2,6 +2,7 @@
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
+from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -37,7 +38,6 @@ plt.show()
 end_1=time.time()
 print("Time spent to animate the zoom on the Mandelbrotset:  {0:.5f} s.".format(end_1 - start_1))
 
-from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 start_2=time.time()
 x=input("Do you want to save each frame of the animation in a folder ? This will slow the animation. Answer 'yes' or 'no' without quotes :")
 Inside_the_set(x)
