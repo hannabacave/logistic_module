@@ -39,7 +39,8 @@ print("Time spent to animate the zoom on the Mandelbrotset:  {0:.5f} s.".format(
 
 from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 start_2=time.time()
-Inside_the_set()
+x=input("Do you want to save each frame of the animation in a folder ? This will slow the animation. Answer 'yes' or 'no' without quotes :")
+Inside_the_set(x)
 end_2=time.time()
 print("Time spent to animate the zoom inside the Mandelbrotset:  {0:.5f} s.".format(end_2 - start_2))
 
