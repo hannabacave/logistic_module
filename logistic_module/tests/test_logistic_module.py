@@ -1,6 +1,4 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
-from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Mandelbrot2D_without_numba import Mandelbrot_2D
-from logistic_module.Mandelbrot2D.Mandelbrot_without_numba.Inside_Mandelbrotset_without_numba import animate_200
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D_jit
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
@@ -47,7 +45,7 @@ def test_mandelbrotset_jit():
     assert np.any(m2.Mandelbrotset) == 1
 
 def Mandelbrot_2D_fig_jit():
-    assert Z.fig.shape==(500,500)
+    assert m2.fig.shape==(2,2)
     
 def test_plot_patterns():
     assert plot_patterns(x="test")=='It seems like you did not chose one of the patterns of the list...Restart the function if you want to plot a characteristic pattern'
