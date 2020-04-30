@@ -88,7 +88,7 @@ def test_Inside_the_set_1():
     assert (end -start)<120
     
 def test_Inside_the_set_1():
-    x=no
+    x="no"
     im=Inside_the_set(x)
     assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
 
