@@ -37,6 +37,12 @@ Hope you can find in this package something to satisfy your curiosity !
 
 .. toctree::
    :maxdepth: 3
+   :caption: Examples :
+
+   auto_examples/index
+
+.. toctree::
+   :maxdepth: 3
    :caption: Other resources :
 
    resources/sources
