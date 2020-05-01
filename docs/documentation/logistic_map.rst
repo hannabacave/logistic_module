@@ -38,9 +38,16 @@ The class to calculate and vectorize logistic_map :
 .. autoclass:: logistic_module.LogisticEquation.Logistic_and_vectorization.Logistic_equation
     :members:
 
-The class to create animation of logistic map and to plot bifurcation diagram :
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+The class to create animation of logistic map :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autoclass:: logistic_module.LogisticEquation.Visualization.Visualization
     :members:
+
+The class to show Bifurcation diagram :
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. autoclass:: logistic_module.LogisticEquation.Bifurcation.Visualization_bifurcation
+    :members:
+
 

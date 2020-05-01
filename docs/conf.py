@@ -11,10 +11,10 @@
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
 
+import sphinx_gallery
 import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
-
 
 # -- Project information -----------------------------------------------------
 
@@ -34,8 +34,15 @@ release = '0.0.1'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinx_gallery.gen_gallery',
 ]
+
+sphinx_gallery_conf = {
+     'examples_dirs': '../examples',   # path to your example scripts
+     'gallery_dirs': 'auto_examples',  # path to where to save gallery generated output
+    'image_scrapers': ('matplotlib',),
+}
 
 
 # The suffix(es) of source filenames.
