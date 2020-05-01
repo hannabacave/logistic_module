@@ -9,7 +9,11 @@ warnings.filterwarnings("ignore")
 def animation(mand):
 
         """ Animate the rotation of the Mandelbrot set in 3D.  
-            Show the link between Mandelbrot set and bifurcation diagram.  
+            Show the bijection between Mandelbrot set and bifurcation diagram.  
+            Use the Mand_3D class from Mandelbrot3D.  
+
+            :param mand: 3D figure of the Mandelbrot set  
+            :type mand: plotly.graph_objs._figure.Figure  
             
             :return: Rotation of the Mandelbrot set in 3D   
             :rtype: Animation 3D"""
@@ -25,13 +29,13 @@ def animation(mand):
                   pad=dict(t=45, r=10),
                   buttons=[dict(label='Play',
                                  method='animate',
-                                 args=[None, dict(frame=dict(duration=0, redraw=True), 
+                                 args=[None, dict(frame=dict(duration=5, redraw=True), 
                                                              transition=dict(duration=0),
                                                              fromcurrent=True,
                                                              mode='immediate'
                                                             )])])]
 
-        anim.update_layout(updatemenus=updatemenus, title = 'Mandelbrot 3D animation')
+        anim.update_layout(updatemenus=updatemenus, title = 'Mandelbrot 3D rotation')
 
 
         frames = []
@@ -42,8 +46,8 @@ def animation(mand):
 
         for t in range(20):
             xt = xt
-            yt = yt - 0.0375
-            zt = zt - 0.0550
+            yt = yt - 0.04
+            zt = zt - 0.05
             frames.append(go.Frame(layout=dict(scene_camera_eye=dict(x=xt,y=yt,z=zt))))
     
         anim.frames=frames
