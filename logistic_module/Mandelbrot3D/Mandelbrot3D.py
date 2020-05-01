@@ -105,7 +105,7 @@ class Mand_3D:
     
         """ Make an interactive vizualisation of the Mandelbrot set in 3D with plotly  
             
-            :return: 3D figure    
+            :return: 3D figure of the Mandelbrot set     
             :rtype: Interactive object"""
 
         fig = go.Figure(data = [go.Surface(z=self.mand(), x=self.grid()[0], y=self.grid()[1],                                   
@@ -150,3 +150,4 @@ class Mand_3D:
                                                                 camera = dict(eye=dict(x=0, y=-0.8, z=2.5) ))))
     
         return fig
+
