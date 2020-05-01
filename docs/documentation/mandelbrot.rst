@@ -69,4 +69,3 @@ Rotation of the 3D Mandelbrot set :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autofunction:: logistic_module.Mandelbrot3D.Mandelbrot3D_anim.animation
-    :members:
