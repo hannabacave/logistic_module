@@ -1,8 +1,8 @@
 #The functions used in this script are coming from other scripts, so we have to import them:
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
-from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
+from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -39,12 +39,14 @@ end_1=time.time()
 print("Time spent to animate the zoom on the Mandelbrotset:  {0:.5f} s.".format(end_1 - start_1))
 
 start_2=time.time()
-Inside_the_set()
+x=input("Do you want to save each frame of the animation in a folder ? This will slow the animation. Answer 'yes' or 'no' without quotes :")
+Inside_the_set(x)
 end_2=time.time()
 print("Time spent to animate the zoom inside the Mandelbrotset:  {0:.5f} s.".format(end_2 - start_2))
 
 start_3=time.time()
-plot_patterns()
+x=input('Which one do you want to plot ("Elephant valley", "Triple squared valley" or "mini mandelbrot". Write the answer without quotes)?')
+plot_patterns(x)
 end_3=time.time()
 print("Time spent to plot a characteristic pattern:  {0:.5f} s.".format(end_3 - start_3))
 

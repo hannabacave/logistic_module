@@ -12,7 +12,7 @@ spec = [('largeur', int64),
         ('array', int64[:,:]), ]
 
 @jitclass(spec)
-class Mandelbrot_2D_jit:
+class Mandelbrot_2D:
     """Returns a matrix with values 0 if the point is in the Mandelbrot set, 1 if it is not. The number of iterations can be chosen with maxiteration, so that the function return the state of the Mandelbrot set after this number of iterations
     
     :return: A matrix with values 1 (if the point is not in the mandelbrot set) and 0 (if the point is in the Mandlebrot set)
