@@ -58,7 +58,7 @@ A method to recognize some patterns into the Mandelbrot set
 Mandelbrot in 3D 
 ---------------------
 
-Interactive vizualisation :  
+Class for interactive vizualisation :  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autoclass:: logistic_module.Mandelbrot3D.Mandelbrot3D.Mand_3D
@@ -66,4 +66,7 @@ Interactive vizualisation :
 
 
 Rotation of the 3D Mandelbrot set :
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. autofunction:: logistic_module.Mandelbrot3D.Mandelbrot3D_anim.animation
+    :members:
