@@ -21,7 +21,7 @@ def animation(mand):
         anim = mand.interact() 
 
         updatemenus=[dict(type='buttons',
-                  showactive=False,
+                  showactive=True,
                   y=1,
                   x=0.8,
                   xanchor='left',
@@ -30,12 +30,19 @@ def animation(mand):
                   buttons=[dict(label='Play',
                                  method='animate',
                                  args=[None, dict(frame=dict(duration=5, redraw=True), 
-                                                             transition=dict(duration=0),
+                                                             transition=dict(duration=0, easing='linear'),
                                                              fromcurrent=True,
                                                              mode='immediate'
                                                             )])])]
 
+
         anim.update_layout(updatemenus=updatemenus, title = 'Mandelbrot 3D rotation')
+        anim.update_traces(go.Surface(contours = dict(y = dict(highlight = False,
+                                                                    show = True,
+                                                                    start = -2,
+                                                                    end = 2,
+                                                                    size = 1,
+                                                                    color = "yellow"))))
 
 
         frames = []
