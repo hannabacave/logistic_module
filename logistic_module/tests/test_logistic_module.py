@@ -4,6 +4,7 @@ from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
 from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
+from logistic_module.Mandelbrot3D.Mandelbrot3D_anim import animation
 from scipy.sparse import csr_matrix, isspmatrix
 import numpy as np
 import time
@@ -137,4 +138,10 @@ def test_m3D_interact():
     m3.interact()
     end = time.time() 
 
-    assert (end - start) < 2.0
+    assert (end - start) < 20.0
+
+def test_m3D_animation():
+
+    """Test if the return of the animation function is right. """
+
+    assert str(type(animation(m3))) == "<class 'plotly.graph_objs._figure.Figure'>" 

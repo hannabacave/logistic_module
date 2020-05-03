@@ -2,7 +2,7 @@ import numpy as np
 import plotly
 import plotly.graph_objects as go
 
-class Mand_3D():
+class Mand_3D:
     
     """Class containing two functions to plot the Mandelbrot set in 3D and one to make it interactive :  
         
@@ -42,9 +42,11 @@ class Mand_3D():
 
     def init_param():
 
-        """ Initialize the parameters for the modelization with asked input for :
-         - n : number of iteration of the Mandelbrot equation
-         - M : number of pixels   """
+        """ Initialize the parameters for the modelization with asked input :    
+         
+         :return:  - n : number of iteration of the Mandelbrot equation    
+                   - M : number of pixels  
+         :rtype: int,int  """
 
         n = int(input("Enter a value for n :"))
         M = int(input("Enter a value for M :"))
@@ -62,7 +64,8 @@ class Mand_3D():
               - length 2*L
               - M elements
               
-           Return a grid formed by X and Y."""
+           :return: A grid formed by X and Y  
+           :rtype: Numpy grid """
         
                 
         x = np.linspace(-self.L+self.dx,self.L+self.dx,self.M)    
@@ -81,7 +84,8 @@ class Mand_3D():
             3) Apply an elevation function on this 2D-array
             4) Filter the element where we apply the elevation function
             
-           Return the elevated 2D Mandelbrot set as a 2D-array."""
+           :return: The elevated 2D Mandelbrot set as a 2D-array  
+           :rtype: Numpy 2D-array  """
         
         X,Y = self.grid()
         C = X + 1j*Y   
@@ -99,7 +103,10 @@ class Mand_3D():
     
     def interact(self):
     
-        """Return an interactive vizualisation of the Mandelbrot set in 3D using plotly."""
+        """ Make an interactive vizualisation of the Mandelbrot set in 3D with plotly  
+            
+            :return: 3D figure of the Mandelbrot set     
+            :rtype: Interactive object"""
 
         fig = go.Figure(data = [go.Surface(z=self.mand(), x=self.grid()[0], y=self.grid()[1],                                   
                                            colorscale = 'Reds', 
@@ -143,3 +150,4 @@ class Mand_3D():
                                                                 camera = dict(eye=dict(x=0, y=-0.8, z=2.5) ))))
     
         return fig
+
