@@ -11,8 +11,8 @@
 import warnings
 import time
 import plotly
-from Mandelbrot3D import Mand_3D
-from Mandelbrot3D_anim import animation
+from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
+from logistic_module.Mandelbrot3D.Mandelbrot3D_anim import animation
 
 warnings.filterwarnings("ignore")
 
