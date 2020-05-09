@@ -89,7 +89,7 @@ class Mandelbrot_2D:
         """returns a matrix of the Mandelbrot set (with zeros and ones) that can be plotted:
 
            :return: the state of the Mandelbrot set at the iteration max_iteration
-           :rtype:array of integers"""
+           :rtype: array of integers"""
 
         self.array=self.fig
         for x in range(self.hauteur):
