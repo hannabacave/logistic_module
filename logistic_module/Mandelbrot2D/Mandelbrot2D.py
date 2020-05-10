@@ -13,16 +13,16 @@ spec = [('largeur', int64),
 
 @jitclass(spec)
 class Mandelbrot_2D:
-    """Returns a matrix with values 0 if the point is in the Mandelbrot set, 1 if it is not. The number of iterations can be chosen with maxiteration, so that the function return the state of the Mandelbrot set after this number of iterations
+    """Returns a matrix with value 0 if the point is in the Mandelbrot set, 1 if it is not. The number of iterations can be chosen with max_iteration, so that the function returns the state of the Mandelbrot set after this number of iterations
     
-    :param largeur: numbers of columns of the matrix
+    :param largeur: number of columns of the matrix
     :type largeur: integer    
 
-    :param hauteur: numbers of lines of the matrix
+    :param hauteur: number of lines of the matrix
     :type hauteur: integer
 
-    :param max_iteration: numbers of iterations to make before returning the matrix
-    :type max_iteration: positive integer
+    :param max_iteration: number of iterations to make before returning the matrix
+    :type max_iteration: integer
 
     :param xmin: minimum value for x
     :type xmin: float
@@ -36,7 +36,7 @@ class Mandelbrot_2D:
     :param ymax: maximum value for y
     :type ymax: float
 
-    :return: A matrix with values 1 (if the point is not in the mandelbrot set) and 0 (if the point is in the Mandlebrot set)
+    :return: A matrix with value 1 (if the point c is not in the mandelbrot set) and 0 (if the point is in the Mandlebrot set)
     :rtype: array of integers
 
         
@@ -86,7 +86,7 @@ class Mandelbrot_2D:
     
     @property
     def Mandelbrotset(self):
-        """returns a matrix of the Mandelbrot set (with zeros and ones) that can be plotted:
+        """returns a matrix of the Mandelbrot set (with zeros and ones, it is a sparse matrix) that can be plotted:
 
            :return: the state of the Mandelbrot set at the iteration max_iteration
            :rtype: array of integers"""
