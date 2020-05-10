@@ -15,12 +15,14 @@ Z_9 = Mandelbrot_2D(500, 500, 600, -1.41,-1.3366,-0.05,0.05)
 
 @profile
 def animate(i):
-    """Animated zoom on the mandelbrot set
-    :param i: the number of time the functions is to be used
+    """Animated zoom on the mandelbrot set:
+    
+    :param i: the number of times the function is to be used
     :type i: integer
 
     :return: An image with a zoom on the Mandelbrot set
     :rtype: object 
+    
     """
     if i == 0:
         im = plt.imshow(Z_2.Mandelbrotset, cmap='binary')
