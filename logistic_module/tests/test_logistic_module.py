@@ -60,7 +60,7 @@ def test_pattern_2():
     assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"
 
 def test_pattern_3():
-    im=plot_patterns(x="Triple squared valley")
+    im=plot_patterns(x="Triple spiral valley")
     assert str(type(im))=="<class 'matplotlib.image.AxesImage'>"    
     
 def test_pattern_time():
