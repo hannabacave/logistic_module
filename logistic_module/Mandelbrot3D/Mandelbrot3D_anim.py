@@ -51,10 +51,10 @@ def animation(mand):
         yt = -0.8
         zt = 2.5
 
-        for t in range(20):
+        for t in range(10):
             xt = xt
-            yt = yt - 0.04
-            zt = zt - 0.05
+            yt = yt - 0.08
+            zt = zt - 0.1
             frames.append(go.Frame(layout=dict(scene_camera_eye=dict(x=xt,y=yt,z=zt))))
     
         anim.frames=frames
