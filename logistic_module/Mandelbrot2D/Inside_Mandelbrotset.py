@@ -10,7 +10,11 @@ from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 
 @profile
 def Inside_the_set(x):
-    """Animate a zoom inside the Mandelbrot set
+    """Animate a zoom inside the Mandelbrot set:
+
+    :param x: a character string saying if you want to save the frames of the animation
+    :type x: string 
+
     :return: video of more than 200 frames
     :rtype: video
     """
@@ -18,7 +22,6 @@ def Inside_the_set(x):
     fig.suptitle("Inside the Mandelbrot fractal")
     Z=Mandelbrot_2D(500, 500, 50, -2, 0.5, -1.25, 1.25)
     im = plt.imshow(Z.Mandelbrotset, cmap='magma')
-    #Possibility to save each frames in a temp directory, created on the fly
     if x=='yes':
         os.mkdir('temp')
     def animate_200(i, x):

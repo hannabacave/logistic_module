@@ -38,19 +38,20 @@ The class to plot :
 
 .. autoclass:: logistic_module.Mandelbrot2D.Mandelbrot2D.Mandelbrot_2D
     :members:
+    :undoc-members:
+    :inherited-members:
 
 A zoom into the Mandelbrot set in two ways :
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autofunction:: logistic_module.Mandelbrot2D.Mandelbrot2DAnimation.animate
 
-.. autofunction:: logistic_module.Mandelbrot2D.Inside_Mandelbrot.Inside_the_set
+.. autofunction:: logistic_module.Mandelbrot2D.Inside_Mandelbrotset.Inside_the_set
  
 A method to recognize some patterns into the Mandelbrot set
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autofunction:: logistic_module.Mandelbrot2D.Plot_pattern.plot_patterns
-    :members:
 
 
 Mandelbrot in 3D 

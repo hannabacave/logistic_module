@@ -45,7 +45,7 @@ end_2=time.time()
 print("Time spent to animate the zoom inside the Mandelbrotset:  {0:.5f} s.".format(end_2 - start_2))
 
 start_3=time.time()
-x=input('Which one do you want to plot ("Elephant valley", "Triple squared valley" or "mini mandelbrot". Write the answer without quotes)?')
+x=input('Which one do you want to plot ("Elephant valley", "Triple spiral valley" or "mini mandelbrot". Write the answer without quotes)?')
 plot_patterns(x)
 end_3=time.time()
 print("Time spent to plot a characteristic pattern:  {0:.5f} s.".format(end_3 - start_3))
