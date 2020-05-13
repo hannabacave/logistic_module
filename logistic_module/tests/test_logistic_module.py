@@ -1,3 +1,4 @@
+import logistic_module as lm
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
