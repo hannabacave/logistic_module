@@ -1,4 +1,6 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
+from logistic_module.LogisticEquation.Bifurcation import Visualization_bifurcation
+from logistic_module.LogisticEquation.Visualization import Visualization
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
@@ -11,6 +13,8 @@ import time
 
 
 le = Logistic_equation(n=1)
+viz = Visualization()
+bif = Visualization_bifurcation()
 m2 = Mandelbrot_2D(largeur=2,hauteur=2,max_iteration=4,xmin=1, xmax=2, ymin=1, ymax=2)
 M=Mandelbrot_2D(500,500,5,-1,1,-1,1)
 M_1=Mandelbrot_2D(500,500,50,-1, -0.5, -0.25, 0.25)
@@ -23,6 +27,9 @@ def test_logistic():
 
 def test_vectorization():
     assert le.vectorization(1,2) == [(1, 0), (1, 0), (0, 0)]
+
+
+
 
 
 def test_Mandelbrot():

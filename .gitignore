@@ -7,5 +7,4 @@ logistic_module.egg-info
 build
 _build
 .gitkeep
-*.csv
 *.pyc
