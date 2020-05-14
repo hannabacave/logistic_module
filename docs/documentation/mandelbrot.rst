@@ -58,7 +58,7 @@ Mandelbrot in 3D
 ---------------------
 
 Class for interactive vizualisation :  
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. autoclass:: logistic_module.Mandelbrot3D.Mandelbrot3D.Mand_3D
     :members:
