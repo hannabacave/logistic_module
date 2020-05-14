@@ -38,7 +38,6 @@ The class to plot :
 
 .. autoclass:: logistic_module.Mandelbrot2D.Mandelbrot2D.Mandelbrot_2D
     :members:
-    :undoc-members:
     :inherited-members:
 
 A zoom into the Mandelbrot set in two ways :
