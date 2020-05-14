@@ -1,4 +1,3 @@
-#The functions used in this script are coming from other scripts, so we have to import them:
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Plot_pattern import plot_patterns
@@ -7,6 +6,7 @@ from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import animation
+import tracemalloc
 
 from numba import int64
 from numba import float64
@@ -15,7 +15,7 @@ from numba import jit
 import time
 
 start = time.time()
-
+tracemalloc.start()
 Z = Mandelbrot_2D(hauteur=500, largeur=500, max_iteration=100,
                   xmin=-2, xmax=0.5, ymin=-1.25, ymax=1.25)
 fig = plt.figure()
@@ -23,7 +23,9 @@ fig.suptitle("Mandelbrot set")
 im = plt.imshow(Z.Mandelbrotset, cmap='magma')
 plt.colorbar()
 plt.show()
-
+current, peak= tracemalloc.get_traced_memory()
+print( f"Current memory usage is : {current/10**6}MB")
+tracemalloc.stop()
 end=time.time()
 print("Time spent to print the Mandelbrotset:  {0:.5f} s.".format(end - start))
 
