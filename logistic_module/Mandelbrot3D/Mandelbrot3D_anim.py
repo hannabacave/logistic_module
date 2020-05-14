@@ -1,7 +1,8 @@
 import plotly
 import plotly.graph_objects as go
 import warnings 
-from logistic_module.Mandelbrot3D.Mandelbrot3D import Mand_3D
+
+from .Mandelbrot3D import Mand_3D
 
 warnings.filterwarnings("ignore")
 
