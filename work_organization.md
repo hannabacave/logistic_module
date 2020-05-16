@@ -28,18 +28,21 @@ The completion of a repository responding to rating criteria was shared in multi
 
 ### Hanna Bacave
 
-Logistic map related modules  
+Logistic map related modules
+Documentation structure
+Module structure
 Test functions  
-Histogram  
-Sparse matrix  
+Histogram    
 Repository structure  
 
 ### Cindy Delage
 
 Mandelbrot2D related modules  
-Mandelbrot2D animation  
+Mandelbrot2D animation
+Sparse matrix
 README.md  
-Repository structure  
+Repository structure 
+Test functions
 
 ### Yassine Mimouni
 
@@ -47,3 +50,4 @@ Mandelbrot3D related modules
 Mandelbrot3D animation  
 work_organization.md  
 Repository structure
+Test functions

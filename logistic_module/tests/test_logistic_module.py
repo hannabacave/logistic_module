@@ -1,6 +1,6 @@
 from logistic_module.LogisticEquation.Logistic_and_vectorization import Logistic_equation
-from logistic_module.LogisticEquation.Bifurcation import Visualization_bifurcation
 from logistic_module.LogisticEquation.Visualization import Visualization
+from logistic_module.LogisticEquation.Bifurcation import Visualization_bifurcation
 from logistic_module.Mandelbrot2D.Mandelbrot2D import Mandelbrot_2D
 from logistic_module.Mandelbrot2D.Mandelbrot2DAnimation import animate
 from logistic_module.Mandelbrot2D.Inside_Mandelbrotset import Inside_the_set
@@ -27,9 +27,6 @@ def test_logistic():
 
 def test_vectorization():
     assert le.vectorization(1,2) == [(1, 0), (1, 0), (0, 0)]
-
-
-
 
 
 def test_Mandelbrot():

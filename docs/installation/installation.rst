@@ -18,20 +18,15 @@ On your python, import the package
 
     >> import logistic-module
 
-To check if the package is perfectly downloaded, you can launch the script file with the following command in your shell :
+
+To see the images and animations proposed in our project, you can launch the script files present in each folder of the package with the command :
 
 .. code:: bash
 
     $ python script.py
 
 
-If the package is installed correctly, you will see two figures :
-
-   - The first, showing the animation of logistic map evolution
-
-   - The second, showing the bifurcation diagram
-
-When you have these two figures, the package is corretly installed.  
+Have fun with this package !
 
 Install by cloning the repository
 ------------------------------------
@@ -42,17 +37,11 @@ In a shell, you have to clone the repository of our package :
 
    $ git clone https://github.com/hannabacave/logistic_module.git
 
-When the folder is created, is perfectly downloaded, you can launch the script file with the following command in your shell :
+When the folder is created, is perfectly downloaded, you need to be in the first folder logistic_module and you can install the package with the command :
 
 .. code:: bash
 
-    $ python script.py
+    $ pip install .
 
 
-If the package is installed correctly, you will see two figures :
-
-   - The first, showing the animation of logistic map evolution
-
-   - The second, showing the bifurcation diagram
-
-When you have these two figures, the package is corretly installed.  
+Then, we can play with this package !
