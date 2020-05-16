@@ -41,7 +41,7 @@ Mandelbrot2D related modules
 Mandelbrot2D animation
 Sparse matrix
 README.md  
-Repository structure
+Repository structure 
 Test functions
 
 ### Yassine Mimouni
