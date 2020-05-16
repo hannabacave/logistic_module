@@ -85,22 +85,5 @@ class Visualization:
         """
         plt.title("Animation of logistic map evolution")
         plt.legend(["y = x", "liaison between x=y and x=f(y)", "y = rx(1-x)"])
-        plt.show(animation.FuncAnimation(self.fig, self.__animate, init_func=self.__init,frames=self.frames, interval=self.equation.n))
-
-    def bifurcation_diagram(self):
-        """Visualization of bifurcation diagram
-
-        :return: Plot showing bifurcation diagram
-        :rtype: plot with matplotlib
-        """
-        fig, ax = plt.subplots()
-
-        for i in range(self.p):
-            self.y = self.equation.logistic(self.r, self.y)
-            if i >= (self.p - self.threshold):
-                ax.plot(self.r, self.y, alpha=.25)
-        
-        ax.set_xlim(2.5, 4)
-        ax.set_title("Bifurcation diagram")
-
+        animation.FuncAnimation(self.fig, self.__animate, init_func=self.__init,frames=self.frames, interval=self.equation.n)
         plt.show()
