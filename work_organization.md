@@ -30,7 +30,7 @@ The completion of a repository responding to rating criteria was shared in multi
 
 Logistic map related modules
 Documentation structure
-Module structure
+Module structure \\
 Test functions  
 Histogram    
 Repository structure  
