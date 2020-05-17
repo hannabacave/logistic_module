@@ -2,7 +2,7 @@
 Mandelbrot set
 ============================
 
-In this setion, you can see how plot the Mandelbrot set.
+In this setion, you can see how to plot the Mandelbrot set.
 """
 
 import matplotlib.pyplot as plt

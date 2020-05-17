@@ -12,7 +12,7 @@ The logistic map is a sequence defined by the following recurrence formula :
 
 where :
 
-- r is the growth ratio and is defined and r :math:`r \in [0, 4]`
+- r is the growth ratio and is defined by :math:`r \in [0, 4]`
 
 - :math:`x_0 \in [0, 1]`
 
