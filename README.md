@@ -13,7 +13,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install logisti
 ```bash
 pip install logistic-module
 ```
-Warning, this package will use 82,7 Ko of space on your hard drive. If you want to clone this repository it will use 9,29 Mo of space on your hard drive.
+Warning, this package will use 82.7 Ko of space on your hard drive. If you want to clone this repository it will use 9.29 Mo of space on your hard drive.
 
 ## Documentation
 
