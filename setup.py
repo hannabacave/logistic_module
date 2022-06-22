@@ -11,7 +11,7 @@ setup(
   packages=['logistic_module','logistic_module.LogisticEquation','logistic_module.Mandelbrot2D', 'logistic_module.Mandelbrot3D'],
   zip_safe=False,
   install_requires= ['matplotlib==3.1.2',
-'numpy==1.18.1',
+'numpy==1.22.0',
 'numba==0.47.0',
 'plotly==4.6.0',
 'scipy==1.3.1',
