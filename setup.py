@@ -14,6 +14,6 @@ setup(
 'numpy==1.18.1',
 'numba==0.47.0',
 'plotly==4.6.0',
-'scipy==1.3.1',
+'scipy==1.10.0',
 'memory_profiler']
 )
